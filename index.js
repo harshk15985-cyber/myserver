@@ -1,17 +1,14 @@
-const express = require("express")
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
-// console.log(app);
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Hello from Express on Render! harsh");
+});
 
 const PORT = process.env.PORT || 3000;
-app.get("/",(req,res) => {
-    return res.send("Hello form home page harsh");
-})
-
-app.get("/about",(req,res) => {
-    return res.send("Hello from About page harsh");
-})
-
-app.listen(PORT , () => {
-    console.log("Sarver chal raha hai harsh");
-})
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
