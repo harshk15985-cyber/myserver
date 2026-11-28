@@ -5,7 +5,7 @@ const app = express();
 
 
 app.get("/", (req, res) => {
-  res.send("Hello from Express\n on Render! harsh");
+  res.send("Hello from Express\n on Render! harsha");
 });
 
 const PORT = process.env.PORT || 3000;
